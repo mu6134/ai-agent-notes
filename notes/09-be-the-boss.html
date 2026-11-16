@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>第 09 講：換你當老闆｜AI Agent 學習筆記</title>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="wrap-wide">
+      <a class="brand" href="../index.html">AI Agent 學習筆記</a>
+      <nav><a href="../index.html">← 回首頁</a></nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="note-hero">
+      <span class="badge">第 09 講</span>
+      <h1>換你當老闆：Agentic Work 與 AI 工作現場</h1>
+      <p class="lead">從「問 AI 問題」變成「把工作交辦給 AI」。</p>
+    </section>
+
+    <p class="tldr">模型大家都差不多，決定 AI 好不好用的是 Harness——尤其是你寫給它的規則。</p>
+
+    <section class="note-section">
+      <h2>以前：AI 出一張嘴，事情都是我在做</h2>
+      <p>用聊天機器人整理桌面時，AI 只能給建議，真正動手的還是自己。</p>
+      <ol class="steps">
+        <li>我把 87 個檔名一個一個抄給 AI。</li>
+        <li>AI 想好分類、列出清單。</li>
+        <li>我自己建 5 個資料夾。</li>
+        <li>我再把 87 個檔案一個一個拖進去。</li>
+      </ol>
+      <p>問題不在 AI 不夠聰明，而是它<mark>沒有手</mark>，碰不到我的檔案。</p>
+    </section>
+
+    <section class="note-section">
+      <h2>現在：我出一張嘴，AI 來完成</h2>
+      <p>給 AI 能處理檔案的工具之後，流程整個反過來。</p>
+      <ol class="steps">
+        <li>我：「幫我整理桌面，先給我看計畫。」</li>
+        <li>AI 打開資料夾、看所有檔案。</li>
+        <li>AI 提出分類計畫，我說「可以，照做」。</li>
+        <li>AI 建資料夾、搬檔案，回報結果。</li>
+      </ol>
+      <table class="compare">
+        <tr><th></th><th>對話式 Chat</th><th>代理式 Agentic</th></tr>
+        <tr><td>你在做的事</td><td>問問題</td><td><mark>交辦工作</mark></td></tr>
+        <tr><td>AI 像是</td><td>顧問</td><td>員工、同事</td></tr>
+        <tr><td>過程</td><td>一問一答，你全程在場</td><td>多步驟，你可以離開</td></tr>
+        <tr><td>能碰的東西</td><td>對話框裡的文字</td><td>檔案、瀏覽器、工具</td></tr>
+        <tr><td>你拿到的</td><td>一段回答</td><td>一份成品</td></tr>
+      </table>
+    </section>
+
+    <section class="note-section">
+      <h2>AI 是怎麼「動手」的？</h2>
+      <p>LLM 本身只會生成文字，不會開資料夾、也不能上網。會動手的是包在外面的 Harness。</p>
+      <div class="callout">
+        <span class="label">課程核心公式</span>
+        <p class="formula">AI Agent = AI Model + Harness</p>
+        <p>模型（大腦）負責想：理解、規劃、判斷。Harness（工作裝備）負責做：把「我要開這個檔案」真的執行，再把結果回報給模型。</p>
+      </div>
+      <p>一個完整的 Harness 通常包含：</p>
+      <ul>
+        <li><strong>工作環境</strong>：一台可以存檔、跑程式的電腦（沙盒）。</li>
+        <li><strong>工具</strong>：讀寫檔案、終端機、瀏覽器、網路搜尋。</li>
+        <li><strong>規則檔</strong>：<mark>CLAUDE.md / AGENTS.md</mark>，每次上工前先讀。</li>
+        <li><strong>技能（Skills）</strong>：一個資料夾＋一份 SKILL.md，教它某件事的標準作業流程。</li>
+        <li><strong>連接器（MCP）</strong>：接上 Gmail、行事曆、雲端硬碟等 App。</li>
+        <li><strong>排程</strong>：時間到了自己開工。</li>
+      </ul>
+    </section>
+
+    <section class="note-section">
+      <h2>規則檔要寫什麼？</h2>
+      <p>CLAUDE.md / AGENTS.md 就像給新員工的交接手冊，重點是不要讓 AI 猜。</p>
+      <ul>
+        <li><strong>要什麼成品</strong>：做完會拿到什麼？放在哪？什麼格式？</li>
+        <li><strong>有什麼限制</strong>：哪些可以動、哪些不能動？</li>
+      </ul>
+      <div class="callout">
+        <span class="label">本站就是例子</span>
+        <p>這個網站本身就是用一份 CLAUDE.md 規範的：檔名規則、頁面結構、樣式限制都寫在裡面，之後新增筆記時 AI 照著做即可。</p>
+      </div>
+    </section>
+
+    <section class="reflection">
+      <h2>我的心得</h2>
+      <p>以前我覺得 AI 好不好用，看的是模型有多聰明；這堂課讓我發現，真正的差別在於我有沒有把「怎麼做事」交代清楚。寫 CLAUDE.md 就像當主管寫工作說明，寫得越清楚，AI 越不用猜，成品也越穩定。</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <span class="disabled">← 上一篇</span>
+      <span class="disabled">下一篇 →</span>
+    </div>
+  </footer>
+
+</body>
+</html>
